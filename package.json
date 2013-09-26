@@ -1,0 +1,13 @@
+{
+    "name": "socketio-example"
+  , "description": ""
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "*",
+      "socket.io": "*",
+      "jade": "*"
+  }
+  , "scripts" : {
+  }
+}
