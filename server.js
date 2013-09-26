@@ -23,18 +23,12 @@ app.configure(function(){
   });
 });
 
-app.get('/', function( req, res) {
-  res.render('customer')
-})
-app.get('/agent', function( req, res) {
-  res.render('agent')
-})
 
 io.sockets.on('connection', function (socket) {
   console.log('Socket IO Started')
   socket.on('ping', function(data) {
       console.log('got ping, sending back pong')
-      socket.emit('pong', data)
+      socket.emit('pong')
   })
 });
 

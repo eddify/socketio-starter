@@ -17,6 +17,15 @@ Basic Socket IO Server
 <script>
   $(document).ready(function() {
     //DO SOME SOCKET IO STUFF
+    var socket = io.connect('http://localhost:3000');
+    socket.on('connect', function () {
+
+      socket.emit('ping');
+
+    });
+    socket.on('pong', function(data) {
+      console.log('Got a Pong!')
+    })
   })
 </script>
   
